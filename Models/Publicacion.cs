@@ -8,6 +8,6 @@ namespace TallerSemana_Biblioteca.Models
     public class Publicacion
     {
         public string Titulo { get; set; }
-        public DateOnly AnoPublicacion { get; set; }
+        public string AnoPublicacion { get; set; }
     }
 }

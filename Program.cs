@@ -1,4 +1,6 @@
-﻿namespace TallerSemana_Biblioteca;
+﻿using TallerSemana_Biblioteca.Models;
+
+namespace TallerSemana_Biblioteca;
 
 class Program
 {
@@ -10,6 +12,7 @@ class Program
         public static void Menu()
     {
         int option;
+        Biblioteca oBiblioteca = new Biblioteca();
         do
         {
             Console.Write(@"
@@ -17,22 +20,8 @@ class Program
 #                                        MENU                                                 #    
 ###############################################################################################
 
-1. Registrar Venta.
-2. Calcular Valor Total De Venta De Una Factura Específica.
-3. Calcular Promedio De Ventas Diarias.
-4. Mostrar Empleado Del Mes. 
-5. Mostrar Cliente Del Mes.
-6. Mostrar Ventas Realizadas Después De Una Fecha Específica.
-7. Mostrar Vendedores Que Realizaron Ventas Por Encima De Cierto Valor.
-8. Agrupar Las Ventas Por Mes y Calcular El Total De Ventas Mensuales.
-9. Encontrar El Vendedor Con El Mayor Número De Ventas En Un Período Específico.
-10. Ordenar las ventas por valor total descendente y mostrar las primeras N ventas.
-11. Encontrar los productos más vendidos por cantidad en un año determinado.
-12. Validar si existe alguna venta con un valor específico.
-13. Buscar todas las ventas realizadas a un cliente específico.
-14. Calcular el total de ventas para cada vendedor y mostrar el promedio de ventas por vendedor.
-15. Encontrar el mes con el mayor número de ventas y mostrar las ventas de ese mes.
-16. Agregar Vendedor.
+1. Agregar Libro.
+2. Mostrar Libros.
 17. Salir.
 
 Selecciona una opcion: ");
@@ -41,9 +30,11 @@ Selecciona una opcion: ");
             {
                 case 1:
                     Console.Clear();
+                    oBiblioteca.AgregarLibro();
                     break;
                 case 2:
                     Console.Clear();
+                    oBiblioteca.MostrarLibros();
                     break;
                 case 3:
                     Console.Clear();

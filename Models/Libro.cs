@@ -14,10 +14,10 @@ namespace TallerSemana_Biblioteca.Models
 
         public Libro()
         {
-            
+
         }
 
-        public Libro(string titulo, DateOnly anoPublicacion, string Isbn, string autor, string genero, double precio)
+        public Libro(string titulo, string anoPublicacion, string Isbn, string autor, string genero, double precio)
         {
             this.Titulo = titulo;
             this.AnoPublicacion = anoPublicacion;
@@ -25,6 +25,15 @@ namespace TallerSemana_Biblioteca.Models
             this.Autor = autor;
             this.Genero = genero;
             this.Precio = precio;
+        }
+
+        public void MostrarDatos(){
+            Console.Write($@"Titulo: {Titulo}
+Año publicacion: {AnoPublicacion}
+ISBN: {Isbn}
+Autor: {Autor}
+Genero: {Genero}
+Precio: {Precio}");
         }
     }
 }
